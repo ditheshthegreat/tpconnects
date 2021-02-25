@@ -97,7 +97,7 @@ class _LoginViewState extends State<LoginView> {
                               print("userDetails :: ${model.defaultResponse}  ${child.runtimeType}");
 
                               if (model.defaultResponse.status) {
-                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeView()));
+                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomeView()));
                               } else {
                                 _scaffoldKey.currentState
                                     .showSnackBar(SnackBar(content: Text("${model.defaultResponse.userResponse}")));
